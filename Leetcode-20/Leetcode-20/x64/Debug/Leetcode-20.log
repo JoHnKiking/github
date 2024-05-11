@@ -1,0 +1,3 @@
+﻿  test.c
+O:\Study\bite\刷刷刷\target-xiamen-university\Leetcode-20\Leetcode-20\test.c(107,30): warning C4047: “==”:“int”与“void *”的间接级别不同
+  Leetcode-20.vcxproj -> O:\Study\bite\刷刷刷\target-xiamen-university\Leetcode-20\x64\Debug\Leetcode-20.exe
