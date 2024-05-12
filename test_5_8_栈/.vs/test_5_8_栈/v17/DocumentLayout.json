@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\",
+  "WorkspaceRootPath": "O:\\Study\\bite\\github\\test_5_8_\u6808\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|solutionrelative:test_5_8_\u6808\\Stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|solutionrelative:test_5_8_\u6808\\Stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F236AEF4-391E-4157-8336-987516EED0C0}|test_5_8_\u6808\\test_5_8_\u6808.vcxproj|solutionrelative:test_5_8_\u6808\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -28,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Stack.h",
-              "DocumentMoniker": "O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.h",
+              "DocumentMoniker": "O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.h",
               "RelativeDocumentMoniker": "test_5_8_\u6808\\Stack.h",
-              "ToolTip": "O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.h",
+              "ToolTip": "O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.h",
               "RelativeToolTip": "test_5_8_\u6808\\Stack.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-08T15:06:35.916Z",
               "IsPinned": true,
@@ -42,11 +42,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Stack.c",
-              "DocumentMoniker": "O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.c",
+              "DocumentMoniker": "O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.c",
               "RelativeDocumentMoniker": "test_5_8_\u6808\\Stack.c",
-              "ToolTip": "O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.c",
+              "ToolTip": "O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\Stack.c",
               "RelativeToolTip": "test_5_8_\u6808\\Stack.c",
-              "ViewState": "AQIAADYAAAAAAAAAAAAUwE8AAAANAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAADwv0oAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-05-08T15:06:29.074Z",
               "IsPinned": true,
@@ -56,15 +56,14 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "test.c",
-              "DocumentMoniker": "O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\test.c",
+              "DocumentMoniker": "O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\test.c",
               "RelativeDocumentMoniker": "test_5_8_\u6808\\test.c",
-              "ToolTip": "O:\\Study\\bite\\\u5237\u5237\u5237\\target-xiamen-university\\test_5_8_\u6808\\test_5_8_\u6808\\test.c",
+              "ToolTip": "O:\\Study\\bite\\github\\test_5_8_\u6808\\test_5_8_\u6808\\test.c",
               "RelativeToolTip": "test_5_8_\u6808\\test.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-05-08T15:06:43.175Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             }
           ]
         }
