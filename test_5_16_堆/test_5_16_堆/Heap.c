@@ -109,3 +109,24 @@ bool HPEmpty(HP* php)
 	assert(php);
 	return php->size == 0;
 }
+
+// 对数组进行堆排序，降序
+void HeapSort(int* a, int n)
+{
+	assert(a);
+
+	//找到最小元素，实现小堆
+	for (int i = 1; i < n; i++)
+	{
+		AdjustUp(a, i);
+	}
+
+	//提取小堆顶，利用向下堆处理实现排序
+	int end = n - 1;
+	while (end > 0)
+	{
+		Swap(&a[0], &a[end]);
+		AdjustDown(a, end, 0);
+		end--;
+	}
+}
