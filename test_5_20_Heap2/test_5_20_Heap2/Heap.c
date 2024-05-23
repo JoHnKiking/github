@@ -1,6 +1,107 @@
 #include"Heap.h"
 
 
+//初始化
+void QueueInit(Queue* pq)
+{
+	assert(pq);
+	pq->phead = pq->ptail = NULL;
+	pq->size = 0;
+}
+//销毁
+void QueueDestroy(Queue* pq)
+{
+	assert(pq);
+
+	QNode* cur = pq->phead;
+	while (cur)
+	{
+		QNode* next = cur->next;
+		free(cur);
+		cur = next;
+	}
+	pq->phead = pq->ptail = NULL;
+	pq->size = 0;
+}
+
+// 队尾插入
+void QueuePush(Queue* pq, QDataType x)
+{
+	assert(pq);
+
+	QNode* newnode = (QNode*)malloc(sizeof(QNode));
+	if (newnode == NULL)
+	{
+		perror("malloc newnode fail");
+	}
+	newnode->val = x;
+	newnode->next = NULL;
+
+	if (pq->ptail == NULL)
+	{
+		pq->phead = newnode;
+		pq->ptail = newnode;
+	}
+	else
+	{
+		pq->ptail->next = newnode;
+		pq->ptail = newnode;
+	}
+	pq->size++;
+
+}
+// 队头删除
+void QueuePop(Queue* pq)
+{
+	assert(pq);
+	assert(pq->size != 0);
+
+	if (pq->size == 1)
+	{
+		free(pq->phead);
+		pq->phead = pq->ptail = NULL;
+	}
+	else
+	{
+		QNode* next = pq->phead->next;
+		free(pq->phead);
+		pq->phead = next;
+	}
+	pq->size--;
+}
+
+// 取队头和队尾的数据
+QDataType QueueFront(Queue* pq)
+{
+	assert(pq);
+	assert(pq->phead);
+	return pq->phead->val;
+}
+QDataType QueueBack(Queue* pq)
+{
+	assert(pq);
+	assert(pq->ptail);
+	return pq->ptail->val;
+}
+
+int QueueSize(Queue* pq)
+{
+	assert(pq);
+	return pq->size;
+}
+bool QueueEmpty(Queue* pq)
+{
+	assert(pq);
+	return pq->size == 0;
+}
+
+
+
+
+
+
+
+
 BTNode* BuyNode(int x)
 {
 	BTNode* node = (BTNode*)malloc(sizeof(BTNode));
@@ -102,7 +203,6 @@ int BinaryTreeLevelKSize(BTNode* root, int k)
 // 二叉树查找值为x的节点
 BTNode* BinaryTreeFind(BTNode* root, BTDataType x)
 {
-	//这种方法输出的节点是最后一个这个值的二叉树节点
 	if (root == NULL)
 	{
 		return NULL;
@@ -111,12 +211,122 @@ BTNode* BinaryTreeFind(BTNode* root, BTDataType x)
 	{
 		return root;
 	}
-	BinaryTreeFind(root->left, x);
-	BinaryTreeFind(root->right, x);
+	BTNode* ret1 = BinaryTreeFind(root->left, x);
+	if(ret1)
+	{
+		return ret1;
+	}
+
+	BTNode* ret2 = BinaryTreeFind(root->right, x);
+	if (ret2)
+	{
+		return ret2;
+	}
+	return NULL;
 }
 
 // 二叉树前序遍历 
 void BinaryTreePrevOrder(BTNode* root)
 {
-	
+	if (root == NULL)
+	{
+		return;
+	}
+	printf("%c ", root->data);
+	BinaryTreePrevOrder(root->left);
+	BinaryTreePrevOrder(root->right);
+}
+
+// 二叉树中序遍历
+void BinaryTreeInOrder(BTNode* root)
+{
+	if (root == NULL)
+	{
+		return;
+	}
+	BinaryTreeInOrder(root->left);
+	printf("%c ", root->data);
+	BinaryTreeInOrder(root->right);
+}
+
+
+// 二叉树后序遍历
+void BinaryTreePostOrder(BTNode* root)
+{
+	if (root == NULL)
+	{
+		return;
+	}
+	BinaryTreePostOrder(root->left);
+	BinaryTreePostOrder(root->right);
+	printf("%c ", root->data);
+}
+
+
+// 层序遍历
+void BinaryTreeLevelOrder(BTNode* root)
+{
+	if (root == NULL) {
+		return;
+	}
+
+	// 使用队列实现层序遍历
+	int front = 0, rear = 0;
+	BTNode** queue = (BTNode**)malloc(sizeof(BTNode*) * 1000); // 假设节点数不超过1000
+	queue[rear++] = root;
+
+	while (front < rear) {
+		BTNode* current = queue[front++]; // 取出队列前端节点
+		printf("%c ", current->data);
+
+		if (current->left != NULL) {
+			queue[rear++] = current->left; // 左子节点入队
+		}
+		if (current->right != NULL) {
+			queue[rear++] = current->right; // 右子节点入队
+		}
+	}
+
+	free(queue); // 释放队列内存
+}
+
+
+// 判断二叉树是否是完全二叉树
+int BinaryTreeComplete(BTNode* root)
+{
+	//当遍历层序遍历二叉树的结果时，只要出现了空节点，这时，我们只需要再判断其后面是不是全为空。只要是在空节点后面的队列中出现了一个非空节点的话，那么这棵二叉树就不是一颗完全二叉树。
+
+	int front = 0, rear = 0;
+	BTNode** queue = (BTNode**)malloc(sizeof(BTNode) * 1000);//假设节点数不超过1000
+	if (root)
+	{
+		queue[rear++] = root;
+	}
+
+	while(front < rear)
+	{
+		BTNode* current = queue[front++];
+
+		if (current == NULL)
+		{
+			break;
+		}
+		else
+		{
+			queue[rear++] = current->left;
+			queue[rear++] = current->right;
+		}
+
+	}
+	while (front < rear)
+	{
+		BTNode* current = queue[front++];
+		if (current)
+		{
+			free(queue); // 释放队列内存
+			return 0;
+		}
+	}
+	free(queue); // 释放队列内存
+	return 1;
 }
