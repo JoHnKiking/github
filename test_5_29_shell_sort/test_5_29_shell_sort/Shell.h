@@ -4,6 +4,20 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<time.h>
 
 
-void shellsort(int* a, int n);
+
+void Swap(int* p1, int* p2);
+void PrintArray(int* a, int n);
+
+
+
+void ShellSort(int* a, int n);
+void InsertSort(int* a, int n);
+void HeapSort(int* a, int n);
+void SelectSort(int* a, int n);
+void QuickSort(int* a, int left, int right);
+
+
+
