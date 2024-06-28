@@ -18,6 +18,7 @@ void InsertSort(int* a, int n);
 void HeapSort(int* a, int n);
 void SelectSort(int* a, int n);
 void QuickSort(int* a, int left, int right);
+void CountSort(int* a, int n);
 
 
 

@@ -201,3 +201,43 @@ void QuickSort(int* a, int left, int right)
 		QuickSort(a, keyi + 1, right);
 	}
 }
+
+
+
+void CountSort(int* a, int n)
+{
+	int max = a[0];
+	int min = a[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (a[i] > max)
+			max = a[i];
+		else if (a[i] < min)
+			min = a[i];
+	}
+	int range = max - min + 1;
+	int* Count = (int*)calloc(range, sizeof(int));
+	if (Count == NULL)
+	{
+		perror("calloc fail");
+		return;
+	}
+
+
+	for (int i = 0; i < n; i++)
+	{
+		Count[a[i] - min]++;
+	}
+
+	int j = 0;
+	for (int i = 0; i < n; i++)
+	{
+		while (Count[i]--)
+		{
+			a[j++] = i + min;
+		}
+	}
+
+	free(Count);
+	Count = NULL;
+}
