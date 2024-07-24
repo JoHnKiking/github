@@ -40,7 +40,7 @@ public:
 
 		//, _year(year)  无法实现，只能初始化一次
 
-		, _n(1)//const成员只能在列表初始化时初始化
+		//, _n(1)//const成员只能在列表初始化时初始化
 
 		, _ref(xx)//引用成员只能在列表初始化时初始化
 
@@ -77,7 +77,7 @@ private:
 	int _day;
 
 	//特殊成员必须初始化
-	const int _n;		//const成员只能在列表初始化时初始化
+	const int _n = 1;		//const成员只能在列表初始化时初始化
 
 	int& _ref;		//引用成员只能在列表初始化时初始化
 
@@ -86,7 +86,7 @@ private:
 	int* _ptr;
 };
 
-int main1()
+int main()
 {
 	int x = 1;
 
@@ -229,7 +229,7 @@ void func(const A& aa, const B& bb)
 	cout << aa._a1 << endl;
 	cout << bb._b1 << endl;
 } 
-int main()
+int main3()
 {
 	A aa;
 	B bb;
